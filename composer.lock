@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "725e85d62095fb7205772ce71ff86620",
+    "content-hash": "77567bce1e7ca0f98895b711853f5228",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1236,6 +1236,62 @@
                 }
             ],
             "time": "2020-11-24T19:55:57+00:00"
+        },
+        {
+            "name": "drudge-rajen/voyager-deployment-orchestrator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DrudgeRajen/voyager-deployment-orchestrator.git",
+                "reference": "aeef1e9e656dff4140caabf1b544d692c79eee5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DrudgeRajen/voyager-deployment-orchestrator/zipball/aeef1e9e656dff4140caabf1b544d692c79eee5e",
+                "reference": "aeef1e9e656dff4140caabf1b544d692c79eee5e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.9@dev",
+                "tcg/voyager": "^1.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DrudgeRajen\\VoyagerDeploymentOrchestrator\\VoyagerDeploymentOrchestratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DrudgeRajen\\VoyagerDeploymentOrchestrator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rajendra Sharma",
+                    "email": "drudge.rajan@gmail.com"
+                }
+            ],
+            "description": "Package for Voyager BREAD Deployment.",
+            "keywords": [
+                "bread-seeder",
+                "laravel",
+                "voyager",
+                "voyager-deployment",
+                "voyager-seeder"
+            ],
+            "support": {
+                "issues": "https://github.com/DrudgeRajen/voyager-deployment-orchestrator/issues",
+                "source": "https://github.com/DrudgeRajen/voyager-deployment-orchestrator/tree/master"
+            },
+            "time": "2020-09-02T02:29:33+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -8870,12 +8926,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drudge-rajen/voyager-deployment-orchestrator": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }
