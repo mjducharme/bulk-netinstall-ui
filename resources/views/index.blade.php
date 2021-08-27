@@ -14,25 +14,25 @@
                 <div class="col-sm-1 my-auto">{{ $loop->iteration }}</div>
                 <div class="col-sm-1 my-auto">{{ $interface->interface_friendly_name }}</div>
                 <div class="col-sm-8 my-auto">
-                    <form style="margin-bottom: 0px; " id="operationForm">
+                    <form style="margin-bottom: 0px; " id="operationForm{{ $loop->iteration }}">
                         <div class="form-row">
                             <div class="col-3">
                                 <select class="form-control" id="selectOperation"
-                                    onchange="displayDivDemo('selectCol{{ $loop->iteration }}', this)" form="operationForm">
+                                    onchange="displayDivDemo('selectCol{{ $loop->iteration }}', this)" form="operationForm{{ $loop->iteration }}">
                                     <option value="0">Reset Slot</option>
                                     <option value="1">Prepare Device</option>
                                     <option value="2">Apply Template</option>
                                 </select>
                             </div>
                             <div class="col" id="selectCol{{ $loop->iteration }}" style="display:none;">
-                                <select class="form-control" id="selectTemplate" form="operationForm">
+                                <select class="form-control" id="selectTemplate" form="operationForm{{ $loop->iteration }}">
                                     @foreach ($templates as $template)
                                         <option>{{ $template->description }} </option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="col mt-auto">
-                                <button type="submit" class="btn btn-primary" form="operationForm">Go</button>
+                                <button type="submit" class="btn btn-primary" form="operationForm{{ $loop->iteration }}">Go</button>
                             </div>
                         </div>
                     </form>
