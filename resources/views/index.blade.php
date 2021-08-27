@@ -27,7 +27,7 @@
                             <div class="col" id="selectCol{{ $loop->iteration }}" style="display:none;">
                                 <select class="form-control" name="selectTemplate{{ $loop->iteration }}" id="selectTemplate" form="operationForm{{ $loop->iteration }}">
                                     @foreach ($templates as $template)
-                                        <option>{{ $template->description }} </option>
+                                        <option value="{{ $template->id }}">{{ $template->description }} </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -37,7 +37,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-sm-2"><b>Op:</b> None<br /><b>Result:</b> None</div>
+                <div class="col-sm-2"><b>Op:</b> {{ $interface->lastop ?? 'None' }}<br /><b>Result:</b> {{ $interface->lastres ?? 'None' }}</div>
             </div>
             <hr />
         @endforeach
