@@ -17,8 +17,7 @@
                     <form style="margin-bottom: 0px; " id="operationForm{{ $loop->iteration }}">
                         <div class="form-row">
                             <div class="col-3">
-                                <select class="form-control" name="selectOperation{{ $loop->iteration }}" id="selectOperation"
-                                    onchange="displayDivDemo('selectCol{{ $loop->iteration }}', this)" form="operationForm{{ $loop->iteration }}">
+                                <select class="form-control" name="selectOperation{{ $loop->iteration }}" id="selectOperation" onchange="displayDivDemo('selectCol{{ $loop->iteration }}', this)" form="operationForm{{ $loop->iteration }}">
                                     <option value="0">Reset Slot</option>
                                     <option value="1">Prepare Device</option>
                                     <option value="2">Apply Template</option>
