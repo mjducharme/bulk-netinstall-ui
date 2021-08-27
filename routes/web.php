@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index', ['interfaces' => App\NetinstallInterface::all(), 'templates' => App\RouterosTemplate::all() ]);
-});
+})->name('index');
 
 
 Route::group(['prefix' => 'admin'], function () {
