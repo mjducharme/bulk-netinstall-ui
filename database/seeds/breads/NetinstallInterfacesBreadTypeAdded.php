@@ -45,7 +45,7 @@ class NetinstallInterfacesBreadTypeAdded extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2021-08-26 18:03:35',
-                'updated_at' => '2021-08-27 00:01:31',
+                'updated_at' => '2021-08-27 15:14:58',
             ));
 
             

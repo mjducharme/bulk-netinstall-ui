@@ -155,6 +155,36 @@ class NetinstallInterfacesBreadRowAdded extends Seeder
                     'details' => '{}',
                     'order' => 9,
                 ),
+                9 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'last_operation',
+                    'type' => 'text',
+                    'display_name' => 'Last Operation',
+                    'required' => 0,
+                    'browse' => 0,
+                    'read' => 1,
+                    'edit' => 0,
+                    'add' => 0,
+                    'delete' => 0,
+                    'details' => '{}',
+                    'order' => 10,
+                ),
+                10 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'last_result',
+                    'type' => 'text',
+                    'display_name' => 'Last Result',
+                    'required' => 0,
+                    'browse' => 0,
+                    'read' => 1,
+                    'edit' => 0,
+                    'add' => 0,
+                    'delete' => 0,
+                    'details' => '{}',
+                    'order' => 11,
+                ),
             ));
         } catch(Exception $e) {
             throw new Exception('exception occur ' . $e);
