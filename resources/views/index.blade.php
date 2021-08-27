@@ -14,7 +14,7 @@
                 <div class="col-sm-1 my-auto">{{ $loop->iteration }}</div>
                 <div class="col-sm-1 my-auto">{{ $interface->interface_friendly_name }}</div>
                 <div class="col-sm-8 my-auto">
-                    <form style="margin-bottom: 0px; ">
+                    <form style="margin-bottom: 0px; " method="POST">
                         <div class="form-row">
                             <div class="col-3">
                                 <select class="form-control" id="selectOperation"
