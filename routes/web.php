@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome', ['interfaces' => App\NetinstallInterface::all(), 'templates' => App\RouterosTemplate::all() ]);
+    return view('index', ['interfaces' => App\NetinstallInterface::all(), 'templates' => App\RouterosTemplate::all() ]);
 });
 
 
@@ -24,4 +24,4 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

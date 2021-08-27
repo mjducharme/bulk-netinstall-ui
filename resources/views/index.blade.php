@@ -7,7 +7,7 @@
     <div class="col-sm-1">Slot</div>
     <div class="col-sm-1">Interface</div>
     <div class="col-sm-8">Current Operation</div>
-    <div class="col-sm-2">Last Operation</div>
+    <div class="col-sm-2">Previous Operation</div>
   </div>
   <hr/>
   @foreach ($interfaces as $interface)
@@ -18,8 +18,9 @@
     <div class="form-row">
     <div class="col-3">  
     <select class="form-control" id="selectOperation" onchange="displayDivDemo('selectCol{{ $loop->iteration }}', this)">
-      <option value="0">Prepare Device</option>
-      <option value="1">Apply Template</option>
+      <option value="0">Reset Slot</option>
+      <option value="1">Prepare Device</option>
+      <option value="2">Apply Template</option>
     </select>
     </div>
     <div class="col" id="selectCol{{ $loop->iteration }}" style="display:none;">
@@ -40,6 +41,6 @@
 
 <script type="text/javascript">
 function displayDivDemo(id, elementValue) {
-      document.getElementById(id).style.display = elementValue.value == 1 ? 'block' : 'none';
+      document.getElementById(id).style.display = elementValue.value == 2 ? 'block' : 'none';
    }
 </script>
