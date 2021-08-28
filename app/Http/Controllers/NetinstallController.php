@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Jobs\RunOperation;
 
 class NetinstallController extends Controller
 {
@@ -25,18 +26,12 @@ class NetinstallController extends Controller
     {
         $operations = array('Reset Slot','Prepare Device','Apply Template');
 	$results = array('Success','Failure');
-	$interface = \App\NetinstallInterface::find($request->interfaceId);
+	$interface = \App\Models\NetinstallInterface::find($request->interfaceId);
 	if ($interface) {
-	    if ($request->selectOperation != 0) {
-                $interface->last_operation = $request->selectOperation;
-	        $interface->last_result = 0;
-	        $interface->save();
-	    } else {
-		$interface->last_operation = null;
-		$interface->last_result = null;
-		$interface->save();
-            }
+	    $operation = $request->selectOperation;
+	    $template = \App\Models\RouterosTemplate::find($request->selectTemplate);
+            RunOperation::dispatch($interface, $operation, $template);
         }
-        return view('index', ['interfaces' => \App\NetinstallInterface::all(), 'templates' => \App\RouterosTemplate::all(), 'operations' => $operations, 'results' => $results ]);
+        return view('index', ['interfaces' => \App\Models\NetinstallInterface::all(), 'templates' => \App\Models\RouterosTemplate::all(), 'operations' => $operations, 'results' => $results ]);
     }
 }

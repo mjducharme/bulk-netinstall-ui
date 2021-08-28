@@ -37,7 +37,7 @@ class RouterosBrandingPackagesBreadTypeAdded extends Seeder
                 'display_name_singular' => 'RouterOS Branding Package',
                 'display_name_plural' => 'RouterOS Branding Packages',
                 'icon' => 'voyager-paint-bucket',
-                'model_name' => 'App\\RouterosBrandingPackage',
+                'model_name' => 'App\\Models\\RouterosBrandingPackage',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
@@ -45,7 +45,7 @@ class RouterosBrandingPackagesBreadTypeAdded extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2021-08-23 21:50:49',
-                'updated_at' => '2021-08-27 00:01:50',
+                'updated_at' => '2021-08-28 01:06:53',
             ));
 
             

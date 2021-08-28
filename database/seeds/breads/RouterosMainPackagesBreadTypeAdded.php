@@ -37,7 +37,7 @@ class RouterosMainPackagesBreadTypeAdded extends Seeder
                 'display_name_singular' => 'RouterOS Main Package',
                 'display_name_plural' => 'RouterOS Main Packages',
                 'icon' => 'voyager-anchor',
-                'model_name' => 'App\\RouterosMainPackage',
+                'model_name' => 'App\\Models\\RouterosMainPackage',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
@@ -45,7 +45,7 @@ class RouterosMainPackagesBreadTypeAdded extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2021-08-23 21:20:58',
-                'updated_at' => '2021-08-27 00:02:02',
+                'updated_at' => '2021-08-28 01:07:46',
             ));
 
             

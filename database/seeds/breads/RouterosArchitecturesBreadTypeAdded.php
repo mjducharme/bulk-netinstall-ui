@@ -37,7 +37,7 @@ class RouterosArchitecturesBreadTypeAdded extends Seeder
                 'display_name_singular' => 'RouterOS Architecture',
                 'display_name_plural' => 'RouterOS Architectures',
                 'icon' => 'voyager-hammer',
-                'model_name' => 'App\\RouterosArchitecture',
+                'model_name' => 'App\\Models\\RouterosArchitecture',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
@@ -45,7 +45,7 @@ class RouterosArchitecturesBreadTypeAdded extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2021-08-23 21:04:21',
-                'updated_at' => '2021-08-27 00:01:44',
+                'updated_at' => '2021-08-28 01:06:37',
             ));
 
             

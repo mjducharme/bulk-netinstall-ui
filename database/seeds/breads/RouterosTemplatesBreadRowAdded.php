@@ -152,7 +152,7 @@ class RouterosTemplatesBreadRowAdded extends Seeder
                     'edit' => 1,
                     'add' => 1,
                     'delete' => 1,
-                    'details' => '{"model":"App\\\\RouterosMainPackage","table":"routeros_main_packages","type":"belongsTo","column":"routeros_main_package_id","key":"id","label":"filename","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
+                    'details' => '{"model":"App\\\\Models\\\\RouterosMainPackage","table":"routeros_main_packages","type":"belongsTo","column":"routeros_main_package_id","key":"id","label":"filename","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
                     'order' => 9,
                 ),
                 9 => 
@@ -167,7 +167,7 @@ class RouterosTemplatesBreadRowAdded extends Seeder
                     'edit' => 1,
                     'add' => 1,
                     'delete' => 1,
-                    'details' => '{"model":"App\\\\RouterosBrandingPackage","table":"routeros_branding_packages","type":"belongsTo","column":"routeros_branding_package_id","key":"id","label":"description","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
+                    'details' => '{"model":"App\\\\Models\\\\RouterosBrandingPackage","table":"routeros_branding_packages","type":"belongsTo","column":"routeros_branding_package_id","key":"id","label":"description","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
                     'order' => 10,
                 ),
                 10 => 
@@ -182,7 +182,7 @@ class RouterosTemplatesBreadRowAdded extends Seeder
                     'edit' => 1,
                     'add' => 1,
                     'delete' => 1,
-                    'details' => '{"model":"App\\\\RouterosDefaultConfiguration","table":"routeros_default_configurations","type":"belongsTo","column":"routeros_default_configuration_id","key":"id","label":"description","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
+                    'details' => '{"model":"App\\\\Models\\\\RouterosDefaultConfiguration","table":"routeros_default_configurations","type":"belongsTo","column":"routeros_default_configuration_id","key":"id","label":"description","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
                     'order' => 11,
                 ),
                 11 => 
@@ -197,7 +197,7 @@ class RouterosTemplatesBreadRowAdded extends Seeder
                     'edit' => 1,
                     'add' => 1,
                     'delete' => 1,
-                    'details' => '{"foreign_pivot_key":"routeros_template_id","related_pivot_key":"routeros_addon_package_id","parent_key":"id","model":"App\\\\RouterosAddonPackage","table":"routeros_addon_packages","type":"belongsToMany","column":"id","key":"id","label":"filename","pivot_table":"routeros_template_addon_package","pivot":"1","taggable":"0"}',
+                    'details' => '{"foreign_pivot_key":"routeros_template_id","related_pivot_key":"routeros_addon_package_id","parent_key":"id","model":"App\\\\Models\\\\RouterosAddonPackage","table":"routeros_addon_packages","type":"belongsToMany","column":"id","key":"id","label":"filename","pivot_table":"routeros_template_addon_package","pivot":"1","taggable":"0"}',
                     'order' => 12,
                 ),
             ));

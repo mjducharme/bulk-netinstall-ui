@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use TCG\Voyager\Models\DataType;
 
-class RouterosMainPackagesBreadRowAdded extends Seeder
+class RouterosAddonPackagesBreadRowAdded extends Seeder
 {
     /**
      * Auto generated seed file
@@ -17,7 +17,7 @@ class RouterosMainPackagesBreadRowAdded extends Seeder
         try {
             \DB::beginTransaction();
 
-            $dataType = DataType::where('name', 'routeros_main_packages')->first();
+            $dataType = DataType::where('name', 'routeros_addon_packages')->first();
 
             \DB::table('data_rows')->insert(array (
                 0 => 
@@ -53,9 +53,9 @@ class RouterosMainPackagesBreadRowAdded extends Seeder
                 2 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'routeros_architecture_id',
+                    'field' => 'routeros_main_package_id',
                     'type' => 'text',
-                    'display_name' => 'Routeros Architecture Id',
+                    'display_name' => 'Routeros Main Package Id',
                     'required' => 1,
                     'browse' => 1,
                     'read' => 1,
@@ -66,21 +66,6 @@ class RouterosMainPackagesBreadRowAdded extends Seeder
                     'order' => 3,
                 ),
                 3 => 
-                array (
-                    'data_type_id' => $dataType->id,
-                    'field' => 'routeros_version_id',
-                    'type' => 'text',
-                    'display_name' => 'Routeros Version Id',
-                    'required' => 1,
-                    'browse' => 1,
-                    'read' => 1,
-                    'edit' => 1,
-                    'add' => 1,
-                    'delete' => 1,
-                    'details' => '{}',
-                    'order' => 4,
-                ),
-                4 => 
                 array (
                     'data_type_id' => $dataType->id,
                     'field' => 'created_at',
@@ -95,7 +80,7 @@ class RouterosMainPackagesBreadRowAdded extends Seeder
                     'details' => '{}',
                     'order' => 5,
                 ),
-                5 => 
+                4 => 
                 array (
                     'data_type_id' => $dataType->id,
                     'field' => 'updated_at',
@@ -110,7 +95,7 @@ class RouterosMainPackagesBreadRowAdded extends Seeder
                     'details' => '{}',
                     'order' => 6,
                 ),
-                6 => 
+                5 => 
                 array (
                     'data_type_id' => $dataType->id,
                     'field' => 'deleted_at',
@@ -125,35 +110,20 @@ class RouterosMainPackagesBreadRowAdded extends Seeder
                     'details' => '{}',
                     'order' => 7,
                 ),
-                7 => 
+                6 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'routeros_main_package_belongsto_routeros_architecture_relationship',
+                    'field' => 'routeros_addon_package_belongsto_routeros_main_package_relationship',
                     'type' => 'relationship',
-                    'display_name' => 'RouterOS Architecture',
+                    'display_name' => 'Associated Main Package',
                     'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
                     'add' => 1,
                     'delete' => 1,
-                    'details' => '{"model":"App\\\\Models\\\\RouterosArchitecture","table":"routeros_architectures","type":"belongsTo","column":"routeros_architecture_id","key":"id","label":"name","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
+                    'details' => '{"model":"App\\\\Models\\\\RouterosMainPackage","table":"routeros_main_packages","type":"belongsTo","column":"routeros_main_package_id","key":"id","label":"filename","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
                     'order' => 8,
-                ),
-                8 => 
-                array (
-                    'data_type_id' => $dataType->id,
-                    'field' => 'routeros_main_package_belongsto_routeros_version_relationship',
-                    'type' => 'relationship',
-                    'display_name' => 'RouterOS Version',
-                    'required' => 1,
-                    'browse' => 1,
-                    'read' => 1,
-                    'edit' => 1,
-                    'add' => 1,
-                    'delete' => 1,
-                    'details' => '{"model":"App\\\\Models\\\\RouterosVersion","table":"routeros_versions","type":"belongsTo","column":"routeros_version_id","key":"id","label":"version","pivot_table":"data_rows","pivot":"0","taggable":"0"}',
-                    'order' => 9,
                 ),
             ));
         } catch(Exception $e) {

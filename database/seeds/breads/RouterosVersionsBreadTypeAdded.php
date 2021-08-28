@@ -37,7 +37,7 @@ class RouterosVersionsBreadTypeAdded extends Seeder
                 'display_name_singular' => 'RouterOS Version',
                 'display_name_plural' => 'RouterOS Versions',
                 'icon' => 'voyager-milestone',
-                'model_name' => 'App\\RouterosVersion',
+                'model_name' => 'App\\Models\\RouterosVersion',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
@@ -45,7 +45,7 @@ class RouterosVersionsBreadTypeAdded extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2021-08-23 20:36:49',
-                'updated_at' => '2021-08-27 00:02:18',
+                'updated_at' => '2021-08-28 01:08:54',
             ));
 
             

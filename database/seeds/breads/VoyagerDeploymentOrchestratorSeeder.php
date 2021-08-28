@@ -30,5 +30,7 @@ class VoyagerDeploymentOrchestratorSeeder extends Seeder
         $this->seed(RouterosTemplatesBreadRowAdded::class);
         $this->seed(RouterosVersionsBreadTypeAdded::class);
         $this->seed(RouterosVersionsBreadRowAdded::class);
+        $this->seed(RouterosAddonPackagesBreadTypeAdded::class);
+        $this->seed(RouterosAddonPackagesBreadRowAdded::class);
     }
 }

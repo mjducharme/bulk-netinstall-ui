@@ -37,7 +37,7 @@ class NetinstallInterfacesBreadTypeAdded extends Seeder
                 'display_name_singular' => 'NetInstall Interface',
                 'display_name_plural' => 'NetInstall Interfaces',
                 'icon' => 'voyager-tag',
-                'model_name' => 'App\\NetinstallInterface',
+                'model_name' => 'App\\Models\\NetinstallInterface',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
@@ -45,7 +45,7 @@ class NetinstallInterfacesBreadTypeAdded extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"order","order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2021-08-26 18:03:35',
-                'updated_at' => '2021-08-27 15:14:58',
+                'updated_at' => '2021-08-28 01:05:20',
             ));
 
             

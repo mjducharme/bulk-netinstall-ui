@@ -6,7 +6,7 @@ use TCG\Voyager\Models\Menu;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Models\MenuItem;
 
-class RouterosDefaultConfigurationsBreadTypeAdded extends Seeder
+class RouterosAddonPackagesBreadTypeAdded extends Seeder
 {
     /**
      * Auto generated seed file
@@ -20,46 +20,46 @@ class RouterosDefaultConfigurationsBreadTypeAdded extends Seeder
         try {
             \DB::beginTransaction();
 
-            $dataType = DataType::where('name', 'routeros_default_configurations')->first();
+            $dataType = DataType::where('name', 'routeros_addon_packages')->first();
 
             if (is_bread_translatable($dataType)) {
                 $dataType->deleteAttributeTranslations($dataType->getTranslatableAttributes());
             }
 
             if ($dataType) {
-                DataType::where('name', 'routeros_default_configurations')->delete();
+                DataType::where('name', 'routeros_addon_packages')->delete();
             }
 
             \DB::table('data_types')->insert(array (
-                'id' => 11,
-                'name' => 'routeros_default_configurations',
-                'slug' => 'routeros-default-configurations',
-                'display_name_singular' => 'RouterOS Default Configuration',
-                'display_name_plural' => 'RouterOS Default Configurations',
-                'icon' => 'voyager-edit',
-                'model_name' => 'App\\Models\\RouterosDefaultConfiguration',
+                'id' => 9,
+                'name' => 'routeros_addon_packages',
+                'slug' => 'routeros-addon-packages',
+                'display_name_singular' => 'RouterOS Add-on Package',
+                'display_name_plural' => 'RouterOS Add-on Packages',
+                'icon' => 'voyager-puzzle',
+                'model_name' => 'App\\Models\\RouterosAddonPackage',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2021-08-23 22:11:26',
-                'updated_at' => '2021-08-28 01:07:06',
+                'created_at' => '2021-08-23 21:35:29',
+                'updated_at' => '2021-08-28 01:06:21',
             ));
 
             
             
 
-            Voyager::model('Permission')->generateFor('routeros_default_configurations');
+            Voyager::model('Permission')->generateFor('routeros_addon_packages');
 
             $menu = Menu::where('name', config('voyager.bread.default_menu'))->firstOrFail();
 
             $menuItem = MenuItem::firstOrNew([
                 'menu_id' => $menu->id,
-                'title' => 'RouterOS Default Configurations',
+                'title' => 'RouterOS Add-on Packages',
                 'url' => '',
-                'route' => 'voyager.routeros-default-configurations.index',
+                'route' => 'voyager.routeros-addon-packages.index',
             ]);
 
             $order = Voyager::model('MenuItem')->highestOrderMenuItem();
@@ -67,7 +67,7 @@ class RouterosDefaultConfigurationsBreadTypeAdded extends Seeder
             if (!$menuItem->exists) {
                 $menuItem->fill([
                     'target' => '_self',
-                    'icon_class' => 'voyager-edit',
+                    'icon_class' => 'voyager-puzzle',
                     'color' => null,
                     'parent_id' => null,
                     'order' => $order,
