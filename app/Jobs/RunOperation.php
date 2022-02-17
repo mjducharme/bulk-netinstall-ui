@@ -45,15 +45,17 @@ class RunOperation implements ShouldQueue
      */
     public function handle()
     {
-	OperationStatusUpdate::dispatch();
+	OperationStatusUpdate::dispatch(['message' => "Executing Operation", 'progress' => 0]);
         if ($this->operation != 0) {
-           $this->interface->last_operation = $this->operation;
-           $this->interface->last_result = 0;
+	   $this->interface->last_operation = $this->operation;
+	   $this->interface->last_result = 0;
 	   $this->interface->save();
+	   OperationStatusUpdate::dispatch(['message' => "Operation Complete", 'progress' => 100]);
 	   return;
         }
         $this->interface->last_operation = null;
-        $this->interface->last_result = null;
-        $this->interface->save();
+	$this->interface->last_result = null;
+	$this->interface->save();
+	OperationStatusUpdate::dispatch(['message' => "Operation Complete", 'progress' => 100]);
     }
 }

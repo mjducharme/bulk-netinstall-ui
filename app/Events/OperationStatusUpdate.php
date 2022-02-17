@@ -14,14 +14,18 @@ class OperationStatusUpdate implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $progress;
+    public $message;
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+	$this->progress = $data['progress'];
+        $this->message= $data['message'];
     }
 
     /**
